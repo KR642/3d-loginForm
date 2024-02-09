@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #201D22;
+    font-family: 'Roboto', sans-serif;
+    color:#ECEAF0ff;
+}
+h1{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    width: auto;
+    align-items: center;
+}
+form>*{
+    margin: 0.25rem 0;
+    width: 100%;
+}
+input{
+    padding: 0.75rem;
+    border-radius: 10px;
+    background-color: transparent;
+    color:#ECEAF0ff;
+    border:1px solid #ECEAF0ff;
+    margin: 0.6rem 0;
+}
+input:focus{
+    border:1px solid #7138C4;
+    outline: #7138C4 2px solid;
+}
+/*To create toggle button*/
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+.toggleLabel {
+	cursor: pointer;
+	text-indent: -9999px;
+    width: 100px;
+    height: 50px;
+	background: #524757;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+.toggleLabel:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: #ECEAF0ff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+input:checked + label {
+	background: #7138C4;
+}
+input:checked + label:after {
+	left: calc(100% - 0px);
+	transform: translateX(-100%);
+}
+.toggleLabel:active:after {
+	width: 80px;
+}
+
+/*End toggle style*/
+
+button{
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #7138c4 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ECEAF0ff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: large;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0.8rem;
+  margin: 0.75rem 0;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+.loginSignUp{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+.toggleCheck{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem auto;
+    width: 50%;
+    align-items: center;
+}
+.toggleCheck>*{
+    padding: 0 1rem;
+}
+.loginSignUp{
+    position: relative;
+    transition: 0.6s;
+	transform-style: preserve-3d;
+}
+.loginSection, .signUpSection{
+    background-color: #2C282E;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+    backface-visibility: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    border-radius: 5px;
+}
+
+
+/*flippping form css*/
+.formContainer{
+    perspective: 1000;
+}
+.loginSection{
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+.signUpSection{
+    transform: rotateY(180deg);
+}
+.flip{
+		transform: rotateY(180deg);
+}
+/*end fliiping form*/

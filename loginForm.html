@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/ Signup form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toggleCheck">
+        <input type="checkbox" id="toggle" /><label for="toggle" class="toggleLabel">Toggle</label>
+        <h4 id="toggleTxt"></h4>
+    </div>
+    <div class="formContainer">
+    <div class="loginSignUp">
+        <div class="loginSection">
+            <h1>Login</h1>
+            <form action="#" class="loginForm">
+                <label for="">Email address:</label>
+                <input type="email" name="emailId" id="emailId">
+                <label for="">Password:</label>
+                <input type="password" name="pwd" id="pwd">
+                <button class="loginBtn">Login</button>
+            </form>
+        </div>
+        <div class="signUpSection">
+            <h1>Register</h1>
+            <form action="#" class="signUpForm">
+                <label for="">Email address:</label>
+                <input type="email" name="signUpEmailId" id="signEmailId">
+                <label for="">Password:</label>
+                <input type="password" name="signUpPwd" id="signPwd">
+                <label for="">Re-enter Password:</label>
+                <input type="password" name="signUpPwd" id="signPwd1">
+                <button class="signUpBtn">Register</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
